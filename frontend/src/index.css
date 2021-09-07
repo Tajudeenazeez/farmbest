@@ -1,0 +1,12 @@
+body h1, h3{
+  color: #000;
+}
+.header h1{
+  font: 900 54px/49px arial sans-serif;
+  color: #000;
+}
+.carousel p{
+  font: 300 34px/29px arial sans-serif;
+
+}
+
