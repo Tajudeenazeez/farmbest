@@ -13,6 +13,9 @@ import InvestorScreen from "./screens/InvestorScreen";
 import OfftakerScreen from "./screens/OfftakerScreen";
 import AboutScreen from "./screens/AboutScreen";
 import ContactScreen from "./screens/ContactScreen";
+import RegisterScreen from "./screens/RegisterScreen";
+import ProfileScreen from "./screens/ProfileScreen";
+import AdminScreen from "./screens/AdminScreen";
 
 function App() {
   return (
@@ -30,6 +33,9 @@ function App() {
           <Route path='/offtaker' component={OfftakerScreen} />
           <Route path='/about' component={AboutScreen} />
           <Route path='/contact' component={ContactScreen} />
+          <Route path='/register' component={RegisterScreen} />
+          <Route path='/profile' component={ProfileScreen} />
+          <Route path='/admin' component={AdminScreen}/>
       </main>
           <Footer/>
     </Router>

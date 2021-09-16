@@ -3,7 +3,7 @@ import { Row, Col,  Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className=".bg-success.bg-gradient">
+    <footer className='bg-black'>
       
       <Row className='bg-success text-center'>
         <h3>Share this page:</h3> 
