@@ -3,12 +3,12 @@ import {Carousel, Button} from "react-bootstrap";
 
 const BootstrapCarousel = () => {
   return (
-    <div>
+    <>
       <Carousel>
-          <Carousel.Item style={{height:'400px'}}>
+          <Carousel.Item style={{height:'80vh'}}>
             <img
               style={{
-                height: '400px'
+                height: '80vh'
               }}
               className="d-block w-100"
               src="images/maize1.jpg"
@@ -20,9 +20,9 @@ const BootstrapCarousel = () => {
               <Button variant='success'>Join us</Button>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item style={{height:'400px'}}>
+          <Carousel.Item style={{height:'80vh'}}>
             <img
-              style={{height:'400px'}}
+              style={{height:'80vh'}}
               className="d-block w-100"
               src="images/maize2.jpg"
               alt="Second slide"
@@ -33,9 +33,9 @@ const BootstrapCarousel = () => {
                  We build a relationship.</p>
             </Carousel.Caption>
           </Carousel.Item>
-          <Carousel.Item style={{height:'400px'}}>
+          <Carousel.Item style={{height:'80vh'}}>
             <img
-              style={{height:'400px'}}
+              style={{height:'80vh'}}
               className="d-block w-100"
               src="images/maiz.jpg"
               alt="Third slide"
@@ -47,7 +47,7 @@ const BootstrapCarousel = () => {
             </Carousel.Caption>
           </Carousel.Item>
       </Carousel>
-    </div>
+    </>
   )
 }
 

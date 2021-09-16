@@ -1,0 +1,31 @@
+{
+  "name": "farmbest",
+  "version": "1.0.0",
+  "description": "e-farming platform made with mern stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tajudeenazeez/farmbest.git"
+  },
+  "author": "Tajudeenazeez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tajudeenazeez/farmbest/issues"
+  },
+  "homepage": "https://github.com/Tajudeenazeez/farmbest#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.12"
+  }
+}

@@ -9,4 +9,42 @@ body h1, h3{
   font: 300 34px/29px arial sans-serif;
 
 }
+ ul{
+  list-style-type: none;
+}
+.text-secondary{
+  text-decoration: none;
+}
+span .fab, .fa{
+  margin: 5px;
+  padding: 3px;
+  color: #fff;
+  font: 300 21px/19px;
+}
+.wrapper span .fab{
+  margin: 5px;
+  padding: 3px;
+  color: #000;
+  font: 300 21px/19px;
+}
 
+.bg-image {
+  background-image: url(./background.jpg);
+  background-size: cover;
+  min-height: 50vh;
+  position: relative;
+  
+}
+.bg-image1 {
+  background-image: url(./background1.jpg);
+  background-size: cover;
+  
+  min-height: 80vh;
+  position: relative;
+}
+
+div .img-holder {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
