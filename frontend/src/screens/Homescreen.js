@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Container, Row, Col, Card } from "react-bootstrap";
 import BootstrapCarousel from "../components/BootstrapCarousel";
-
+import Testmonial from "../components/Testmonial";
 
 
 const HomeScreen = () => {
@@ -9,16 +9,17 @@ const HomeScreen = () => {
     <>
     <Row className='header py-3'>
       <h1 style={{color:'green'}}>We help  you make a great living through Farm investment</h1>    
-      <BootstrapCarousel></BootstrapCarousel>
+      <BootstrapCarousel/>
     </Row>
-        <Row>
-          <Col>
-          <Button variant='secondary' className='m-3'>
-        New to farmBest? Start here
+    <Container>
+        <Row className='justify-content-md-center'>
+          <Col className=''>
+          <h4 className='text-black'>New to farmBest?</h4>
+          <Button variant='warning'>
+         Start here
       </Button>
           </Col>
         </Row>
-    <Container>
       <Row className='justify-content-md-center'>
         <Col className='my-auto' >
           <h3 className='text-success'>Connecting agricultural investors across the globe</h3>
@@ -42,18 +43,16 @@ const HomeScreen = () => {
       </Row>
     </Container>
     <Row>
-      <Col>
+      <Col className='text-center'>
+      <h1 className='text-success'>Testimonials</h1>
+      <p>Don't just take it from us, let our clients do the talking</p>
+      </Col>
+    </Row>
+    <Row>
 
-    <Card>
-      <Card.Body>
-        <Card.Text>
-        FarmBest investment platform is an initiative of farmBest
-         Agric-Tech company to help farmers, investors and offtakers to profit from  quality farm 
-         produce.Our farmers are well trained by experts in each field to ensure use 
-         of best farm practice. 
-        </Card.Text>
-      </Card.Body>
-    </Card>
+      <Col>
+      <Testmonial/>
+
       </Col>
     </Row>
 

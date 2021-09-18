@@ -22,7 +22,7 @@ const Footer = () => {
           <p>Begin investing in farming and enjoy the life of an enriched Farmer!</p>
           </Col>
           <Col>
-            <Button className='my-2' variant='secondary'>
+            <Button className='my-2' variant='warning'>
               Learn more
             </Button>
           </Col>

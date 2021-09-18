@@ -17,6 +17,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AdminScreen from "./screens/AdminScreen";
 
+
 function App() {
   return (
     <Router>
@@ -36,6 +37,7 @@ function App() {
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/admin' component={AdminScreen}/>
+         
       </main>
           <Footer/>
     </Router>
