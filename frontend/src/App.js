@@ -16,6 +16,7 @@ import ContactScreen from "./screens/ContactScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AdminScreen from "./screens/AdminScreen";
+import Rate from "./components/Rate";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/admin' component={AdminScreen}/>
-         
+          <Route path='/rate' component={Rate}/>
       </main>
           <Footer/>
     </Router>
