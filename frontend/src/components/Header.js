@@ -5,11 +5,11 @@ import { LinkContainer } from "react-router-bootstrap";
 const Header = () => {
   return (
     <header>
-        <Navbar bg="success" expand="lg" >
+        <Navbar bg="success" expand="lg">
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              <Image style={{width:'90px', height:'90px'}} src='images/farmbestlogo.png' alt='FarmBests'/>
+              <Image style={{width:'60px', height:'60px'}} src='images/farmbestlogo.png' alt='FarmBests'/>
             </Navbar.Brand>
           </LinkContainer>
 
@@ -19,22 +19,40 @@ const Header = () => {
                 <LinkContainer to='/'>
                   <Nav.Link>Home</Nav.Link>
                 </LinkContainer>
-                <Nav.Link href="#about">About</Nav.Link>
+                <LinkContainer to= '/about'>
+                  <Nav.Link>About</Nav.Link>
+                </LinkContainer>
                 <NavDropdown title="Crop investment" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Maize</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Cassava</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Soya</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">Potatoes</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">Combination</NavDropdown.Item>
+                  <LinkContainer to='/maize'>
+                    <NavDropdown.Item >Maize</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/cassava'>
+                    <NavDropdown.Item >Cassava</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/potatoe'>
+                    <NavDropdown.Item >Potatoe</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/soya'>
+                    <NavDropdown.Item >Soya</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
                 <NavDropdown title="Collaboration" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#farmer">farmer</NavDropdown.Item>
-                  <NavDropdown.Item href="#investor">investor</NavDropdown.Item>
-                  <NavDropdown.Item href="#offtaker">offtaker</NavDropdown.Item>
+                <LinkContainer to='/farmer'>
+                    <NavDropdown.Item >Farmer</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/investor'>
+                    <NavDropdown.Item >Investor</NavDropdown.Item>
+                  </LinkContainer>
+                  <LinkContainer to='/offtaker'>
+                    <NavDropdown.Item >Offtaker</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
-                <Nav.Link href="#Help">Help?</Nav.Link>
-                <Nav.Link href="#Login">Login</Nav.Link>
+                <LinkContainer to='/contact'>
+                  <Nav.Link>Help?</Nav.Link>
+                </LinkContainer>
+                <LinkContainer to='/login'>
+                  <Nav.Link>Login</Nav.Link>
+                </LinkContainer>
               </Nav>
             </Navbar.Collapse>
             </Container>

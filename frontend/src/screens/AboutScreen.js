@@ -1,31 +1,33 @@
 import React from 'react'
 import {Container, Row, Col} from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Particles from '../components/Particles';
 
 
 const AboutScreen = () => {
   return (
     <>
+    
       <Row className='bg-image'>
         <h3 className='text-center text-white my-auto'>At FarmBest...<br/>
         We are your bestfriend</h3>
-        
+       
       </Row>
-      <Container>
+      <Container className='about-div'>
 
-      <Row className='text-success'>
+      <Row className='text-success my-5'>
         <Col  xs={12}>
             <h3 className='text-success'>
               What we do
             </h3>
-            <p>Farmbest is an Agric-Tech company that use modern technologies 
+            <p className='text-white'>Farmbest is an Agric-Tech company that use modern technologies 
               to help improve farm yields, livestock production and mitigating 
               pest attack using best farm practice.
             </p>
         </Col>
-        <Col className='my-auto'>
+        <Col >
         <h3 className='text-success'>Trio investment</h3>
-        <p className='text-success'>FarmBest investment platform is an initiative of farmBest
+        <p className='text-white'>FarmBest investment platform is an initiative of farmBest
          Agric-Tech company to help farmers, investors and offtakers to profit from  quality farm 
          produce.Our farmers are well trained by experts in each field to ensure use 
          of best farm practice. Money from our investment platform are use to empower the
@@ -34,19 +36,19 @@ const AboutScreen = () => {
         </Col>
       </Row>
       <Row>
-        <h3 className='text-success'>Farming program</h3>
-        <p> In FarmBest, planting and cultivation of high yield crops with improved
+        <h3 className='text-success my-3'>Farming program</h3>
+        <p className='text-white'> In FarmBest, planting and cultivation of high yield crops with improved
            technology gives us the best result in all our farming activities
         </p>   
-           <h3 className='text-success'>Maize Crop</h3>
-        <p>We choose maize planting among other selected plant because of its highly industrial 
+           <h3 className='text-success my-3'>Maize Crop</h3>
+        <p className='text-white'>We choose maize planting among other selected plant because of its highly industrial 
           demand and unfortunate low supply in the market. Maize has continuously increase its 
           demand over the years due to increase in animal feed production and food production 
           company creation in the last one decade. It was estimated that animal feed production 
           only consumes 2/3 of maize produce in the country annually leaving the remaining 1/3 for
            food production and other consumptions. 
         </p>
-        <p>
+        <p className='text-white my-3'>
           FarmBest seek to assist farmers in maize production meet up the demand supply chain 
           through its investment platform by providing all participating farmers with finance 
           and expert advice needed to increase their farm yield.

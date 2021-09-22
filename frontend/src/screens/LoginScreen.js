@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
 import {login} from "../actions/userAction";
-import { Redirect } from "react-router-dom";
+import Particles from '../components/Particles';
 
 const LoginScreen = ({location, history}) => {
   const [email, setEmail] = useState('')
@@ -15,7 +15,7 @@ const LoginScreen = ({location, history}) => {
   const dispatch = useDispatch()
   const userLogin = useSelector(state => state.userLogin)
   const {loading, error, userInfo} = userLogin
-  //const redirect = location.search ? location.search.split('=')[1] : '/'
+  const redirect = location.search ? location.search.split('=')[1] : '/'
 
   useEffect(() => {
     if(userInfo)
@@ -31,12 +31,13 @@ const LoginScreen = ({location, history}) => {
 
   return (
     <FormContainer>
-      {userInfo ? <Redirect to='/'/> : null}
-      <h3 className='text-center'>Login page</h3>
+      {userInfo ? <redirect to='/'/> : null}
+      <h3 className='text-center text-black my-5'>Login page</h3>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader/>}
-      <Form onSubmit={submitHandler}>
-        <Form.Group controlId = 'email'>
+      <Particles/>
+      <Form onSubmit={submitHandler} style={{height:'60vh'}} className='form-tag'>
+        <Form.Group controlId = 'email'className='my-3' >
           <Form.Label>
             Email
           </Form.Label>
@@ -47,9 +48,9 @@ const LoginScreen = ({location, history}) => {
           onChange = { (e) => setEmail(e.target.value) }
           required/>
         </Form.Group>
-        <Form.Group controlId='password'>
+        <Form.Group controlId='password' className='my-3'>
           <Form.Label>
-            password
+            Password
           </Form.Label>
           <Form.Control 
           type='password' 
@@ -58,16 +59,20 @@ const LoginScreen = ({location, history}) => {
           onChange = {(e) => setPassword(e.target.value)}
           required/>
         </Form.Group>
+         <Row>
+         <Col >
         <Button type='submit' className='my-3' variant='success'>
           login
         </Button>
-         {/* <Row>
-           <Col>
+        </Col>
+         </Row>
+         <Row>
+         <Col>
             <p>Dont have an account yet?{' '}
-              <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Sign up</Link></p>
-            <p>Forgot your password?<Link to={redirect ? '/reset' : '/reset'}>Click here</Link></p>
+              <Link className ='sign-text' to={redirect ? `/register?redirect=${redirect}` : '/register'}>Sign up</Link></p>
+            <p>Forgot your password?<Link className ='sign-text' to={redirect ? '/reset' : '/reset'}>Click here</Link></p>
           </Col>
-         </Row> */}
+         </Row>
       </Form>
     </FormContainer>
   )

@@ -16,17 +16,19 @@ import ContactScreen from "./screens/ContactScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AdminScreen from "./screens/AdminScreen";
-import Rate from "./components/Rate";
+import Topper from "./components/Topper";
+
 
 
 function App() {
   return (
     <Router>
-      <main style={{height:'max-content'}}>
+      <main style={{height:'max-content'}}> 
+          <Topper/> 
           <Header/>
           <Route path='/' component={HomeScreen} exact/>
           <Route path='/cassava' component={CassavaScreen}/>
-          <Route path='/potato' component={PotatoScreen}/>
+          <Route path='/potatoe' component={PotatoScreen}/>
           <Route path='/maize' component={MaizeScreen} />
           <Route path='/soya' component={SoyaScreen} />
           <Route path='/login' component={LoginScreen} />
@@ -38,7 +40,8 @@ function App() {
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/admin' component={AdminScreen}/>
-          <Route path='/rate' component={Rate}/>
+     
+         
       </main>
           <Footer/>
     </Router>

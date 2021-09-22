@@ -1,10 +1,40 @@
-body h1, h3{
+h1, h3{
   color: #000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .maincarousel h1{
   font: 900 54px/49px arial sans-serif;
   color: #fff;
-  
+ 
+}
+.connect-div{
+  background: #011f00;
+  align-content: center;
+  justify-content: center;
+  margin: auto;  
+}
+.trio-div{
+  background: #fafafa;
+  align-content: center;
+  justify-content: center;
+  margin: auto;  
+}
+
+.about-div{
+  background: grey;
+  align-content: center;
+  justify-content: center;
+  margin: 30px 40px;  
+}
+.form-tag{
+  font: 600 44px/36px;
+  color: #000;
+}
+
+.sign-text{
+  font: 700 2.5em/2em;
+  text-decoration: none;
+  color: #000;
 }
 .maincarousel p{
   font: 300 34px/29px arial sans-serif;
