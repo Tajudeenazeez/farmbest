@@ -4,15 +4,17 @@ const colors = require('colors')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const myDatabase = require('./config/db')
+const userRoute = require('./route/userRoutes');
 
 myDatabase()
 const app = express()
 
 app.get('/', (req, res) =>
-  res.send('Server is runnning')
+res.send('Server is running')
 )
+app.use(express.json())
 
-
+app.use('/api/users', userRoute)
 
 
 

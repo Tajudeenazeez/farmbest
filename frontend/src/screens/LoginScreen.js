@@ -1,12 +1,17 @@
 import React, {useState, useEffect} from 'react'
 import { Button, Form, Row, Col } from "react-bootstrap";
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
-import userInfo from "../screens/users";
+import user from "../screens/users";
 const LoginScreen = () => {
-  const [email, setEmail] = useState(userInfo.email)
-  const [password, setPassword] = useState(userInfo.password)
-
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
+  const dispatch = useDispatch()
+  const userLogin = useSelector(state => state.userLogin)
+  const {loading, error, userInfo} = userLogin
+  const Redirect = location.search
   return (
     <FormContainer>
       <h3 className='text-center'>Login page</h3>
