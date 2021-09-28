@@ -14,30 +14,28 @@ const LoginScreen = ({location, history}) => {
   
   const dispatch = useDispatch()
   const userLogin = useSelector(state => state.userLogin)
-  const {loading, error, userInfo} = userLogin
+  const {loading, error, user} = userLogin
   const redirect = location.search ? location.search.split('=')[1] : '/'
 
   useEffect(() => {
-    if(userInfo)
-     history.push('/')
+    if(user)
+     history.push(redirect)
     
-  }, [history, userInfo])
+  }, [history, user, redirect])
 
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
   }
 
-
   return (
     <FormContainer>
-      {userInfo ? <redirect to='/'/> : null}
       <h3 className='text-center text-black my-5'>Login page</h3>
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader/>}
       <Particles/>
       <Form onSubmit={submitHandler} style={{height:'60vh'}} className='form-tag'>
-        <Form.Group controlId = 'email'className='my-3' >
+        <Form.Group controlId ='email' className='my-3' >
           <Form.Label>
             Email
           </Form.Label>

@@ -1,10 +1,12 @@
 import React from 'react'
-
+import { ProgressBar } from "react-bootstrap";
 const Indicator = () => {
+  
   return (
-    <div>
-      <p>PROGRESS BAR</p>
-    </div>
+    <>
+    Total unit sold
+    <ProgressBar animated now={45} />     
+    </>
   )
 }
 

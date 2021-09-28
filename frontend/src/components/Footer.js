@@ -54,7 +54,7 @@ const Footer = () => {
           <h3 className='text-success' >Crop investment</h3>
           <ul>
               <li><Link className='text-secondary' to='/maize'>Maize</Link></li>
-              <li><Link className='text-secondary' to='/cassava'>Cassva</Link></li>
+              <li><Link className='text-secondary' to='/cassava'>Cassava</Link></li>
               <li><Link className='text-secondary' to='/potatoe'>Potatoe</Link></li>
               <li><Link className='text-secondary' to='/soya'>Soya</Link></li>
             </ul>
@@ -72,7 +72,7 @@ const Footer = () => {
           <ul>
               <li><Link className='text-secondary' to='/contact'>Contact Us</Link></li>
               <li><Link className='text-secondary' to='/faq'>FAQ</Link></li>
-              <li><Link className='text-secondary' to='/how'>How it works</Link></li>
+              <li><Link className='text-secondary' to='/faq'>How it works</Link></li>
             </ul>
           </Col>
           <Col className='text-center py-3'>
@@ -86,7 +86,7 @@ const Footer = () => {
         <Row>
           <Col>
           
-          <p>OFFAFARM<br/>
+          <p>FARMBEST<br/>
             30 WESTERN RESERVOIUR ROAD <br/>
             OLOHUNSHOGO ILORIN<br/>
             KWARA STATE <br/>

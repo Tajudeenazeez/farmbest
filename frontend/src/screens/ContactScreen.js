@@ -7,8 +7,8 @@ const ContactScreen = () => {
     <FormContainer>
       <Row >
         <Col className='m-3'>
-        <h3 className='text-center '>Contact
-       page</h3>
+        <h3 className='text-center text-black'>Contact
+       Page</h3>
         </Col>
       </Row>
     <Row className='bg-secondary my-2' md={2}>

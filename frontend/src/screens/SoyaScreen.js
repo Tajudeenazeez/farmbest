@@ -20,7 +20,7 @@ const SoyaScreen = () => {
           <Col>
             <Card>
               <Link to='/soya'>
-                <Card.Img src='images/soyabeans.jpg' alt='soya.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/soyabeans.jpg' alt='soya.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='/soya'>
@@ -42,7 +42,7 @@ const SoyaScreen = () => {
           <Col>
             <Card>
               <Link to='/soya'>
-                <Card.Img src='images/soy.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/soy.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='/soya'>

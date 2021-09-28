@@ -20,7 +20,7 @@ const PotatoScreen = () => {
           <Col>
             <Card>
               <Link to='/potato'>
-                <Card.Img src='images/potato.jpg' alt='maize.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/potato.jpg' alt='maize.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='/potato'>
@@ -42,7 +42,7 @@ const PotatoScreen = () => {
           <Col>
             <Card>
               <Link to='/potato'>
-                <Card.Img src='images/potatoe.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/potatoe.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='potato'>

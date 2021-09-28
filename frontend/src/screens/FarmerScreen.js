@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const FarmerScreen = () => {
   return (
     <FormContainer>
-      <h3 className='text-center'>Farmer's page</h3>
+      <h3 className='text-center text-black'>Farmer's page</h3>
       <Form>
       <Form.Group>
           <Form.Label>

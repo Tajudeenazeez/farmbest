@@ -6,9 +6,10 @@ import Message from '../components/Message'
 import { useSelector, useDispatch } from "react-redux";
 import FormContainer from "../components/FormContainer";
 import { register } from "../actions/userAction";
+import AlertMessage  from "../components/AlertMessage";
 
 const RegisterScreen = ({location, history}) => {
-  const [name, setName] = useState('')
+  const [username, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -23,16 +24,15 @@ const RegisterScreen = ({location, history}) => {
     if(user)
     history.push(redirect)
     
-  }, [history, location, user])
+  }, [history, redirect, user])
 
   const submitHandler = (e) => {
     e.preventDefault()
-    if(password != confirmPassword){
-      setMessage('password is incorrect')
+    if(password !== confirmPassword){
+        setMessage(<AlertMessage/>)
   } else{
-    dispatch(register(name, email, password))
+    dispatch(register(username, email, password))
   }
-  dispatch(register(name, email, password))
   }
   
   return (
@@ -47,8 +47,8 @@ const RegisterScreen = ({location, history}) => {
           <Form.Control 
           type='name' 
           placeholder='Enter your name'
-          value= {name}
-          onChange={(e)=>setName(e.target.value)} 
+          value= {username}
+          onChange={(e)=>setUserName(e.target.value)} 
           required/>
         </Form.Group>
         <Form.Group controlId='email'>

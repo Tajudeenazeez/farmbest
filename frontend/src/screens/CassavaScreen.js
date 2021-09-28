@@ -20,7 +20,7 @@ const CassavaScreen = () => {
           <Col>
             <Card>
               <Link to='/cassava'>
-                <Card.Img src='images/cassava.jpg' alt='cassava.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/cassava.jpg' alt='cassava.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='/cassava'>
@@ -42,7 +42,7 @@ const CassavaScreen = () => {
           <Col>
             <Card>
               <Link to='/cassava'>
-                <Card.Img src='images/cassava2.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/cassava2.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='cassava'>

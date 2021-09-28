@@ -1,8 +1,16 @@
 import React from 'react'
+import { useDispatch, useSelector } from "react-redux";
 import { Nav, Container, Navbar, NavDropdown, Image} from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-
+import {logout} from "../actions/userAction";
 const Header = () => {
+  const dispatch = useDispatch()
+  const userLogin = useSelector(state => state.userLogin)
+  const {user} = userLogin
+
+  const logoutHandler = () => {
+    dispatch(logout())
+  }
   return (
     <header>
         <Navbar bg="success" expand="lg">
@@ -35,6 +43,9 @@ const Header = () => {
                   <LinkContainer to='/soya'>
                     <NavDropdown.Item >Soya</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to='/combination'>
+                    <NavDropdown.Item >ALL farms</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
                 <NavDropdown title="Collaboration" id="basic-nav-dropdown">
                 <LinkContainer to='/farmer'>
@@ -50,9 +61,18 @@ const Header = () => {
                 <LinkContainer to='/contact'>
                   <Nav.Link>Help?</Nav.Link>
                 </LinkContainer>
+                {user? (
+                  <NavDropdown title={user.username} id='username'>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item>profile</NavDropdown.Item>
+                  </LinkContainer>
+
+                  <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                  </NavDropdown>
+                ):(
                 <LinkContainer to='/login'>
-                  <Nav.Link>Login</Nav.Link>
-                </LinkContainer>
+                <Nav.Link>Login</Nav.Link>
+              </LinkContainer>)}
               </Nav>
             </Navbar.Collapse>
             </Container>

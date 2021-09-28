@@ -6,7 +6,7 @@ const Topper = () => {
 <Row className='text-center bg-secondary text-success'>
   <Col >
   
-      <span className='mx-5 py-3' style={{fontSize:'20px'}} >We use islamic principles and guidelines</span>
+      <span className='mx-5 py-3' style={{fontSize:'20px'}} >We are number one Nigeria digital farm </span>
       <MdCall />
       <span className= 'py-3' style={{fontSize:'15px'}}>Helpline? +2348071965540</span>
       

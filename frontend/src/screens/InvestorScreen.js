@@ -5,7 +5,7 @@ import FormContainer from "../components/FormContainer";
 const InvestorScreen = () => {
   return (
     <FormContainer>
-      <h3 className='text-center'>Investor registration
+      <h3 className='text-center text-black'>Investor's 
        page</h3>
       <Form>
       <Form.Group>

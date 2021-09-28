@@ -17,8 +17,8 @@ import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import AdminScreen from "./screens/AdminScreen";
 import Topper from "./components/Topper";
-
-
+import FaqScreen from "./screens/FaqScreen";
+import CombinationScreen from "./screens/CombinationScreen"
 
 function App() {
   return (
@@ -40,7 +40,8 @@ function App() {
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/admin' component={AdminScreen}/>
-     
+          <Route path='/faq' component={FaqScreen}/>
+          <Route path='/combination' component={CombinationScreen}/>
          
       </main>
           <Footer/>

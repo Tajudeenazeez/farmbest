@@ -11,7 +11,7 @@ const MaizeScreen = () => {
         <Row className='py-3 d-flex'>
           <Col className='m-auto   justify-content-center' md={5} >
               <div>
-                <h3 className='text-center'>Maize Page</h3>
+                <h3 className='text-center text-black'>Maize Page</h3>
               </div>
           </Col>
         </Row>
@@ -20,11 +20,11 @@ const MaizeScreen = () => {
           <Col>
             <Card>
               <Link to='/maize'>
-                <Card.Img src='images/maize2.jpg' alt='maize.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}} src='images/maiz.jpg' alt='maize.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='/maize'>
-                  <Card.Title>Gbagede farm I</Card.Title>
+                  <Card.Title className='text-success card-text'>Gbagede farm I</Card.Title>
                 </Link>
                 <Card.Text>
                   Amount per unit: N50,000 
@@ -34,7 +34,7 @@ const MaizeScreen = () => {
                 </Card.Text>
                 <Indicator/>
                 <Price/>
-                <Button>Open</Button>
+                <Button disabled>Open</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -42,11 +42,11 @@ const MaizeScreen = () => {
           <Col>
             <Card>
               <Link to='/maize'>
-                <Card.Img src='images/maize2.jpg'/>
+                <Card.Img style={{width:'100%', height:'60vh'}}  src='images/maize3.jpg'/>
               </Link>
               <Card.Body>
                 <Link to='maize'>
-                  <Card.Title>Gbagede farm II</Card.Title>
+                  <Card.Title className='text-success'>Gbagede farm II</Card.Title>
                 </Link>
                 <Card.Text>
                   Amount per unit: N50,000 
@@ -56,7 +56,7 @@ const MaizeScreen = () => {
                 </Card.Text>
                 <Indicator/>
                 <Price/>
-                <Button>closed</Button>
+                <Button  disabled>closed</Button>
               </Card.Body>
             </Card>
           </Col>

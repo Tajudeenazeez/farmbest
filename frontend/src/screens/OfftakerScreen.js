@@ -5,7 +5,7 @@ import FormContainer from "../components/FormContainer";
 const OfftakerScreen = () => {
   return (
     <FormContainer>
-      <h3 className='text-center'>Offtaker registration
+      <h3 className='text-center text-black'>Offtaker's
        page</h3>
       <Form>
       <Form.Group>
