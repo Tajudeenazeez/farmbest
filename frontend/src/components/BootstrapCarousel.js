@@ -42,7 +42,6 @@ const BootstrapCarousel = () => {
               src="images/maiz.jpg"
               alt="Third slide"
             />
-
             <Carousel.Caption className='maincarousel'>
               <h1><strong>We are one bridge that crosses all nations</strong></h1>
               <p> We are earnesting all possible strenght to see you smile.</p>

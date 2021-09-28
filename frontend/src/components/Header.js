@@ -13,42 +13,44 @@ const Header = () => {
   }
   return (
     <header>
-        <Navbar bg="success" expand="lg">
+      <Navbar bg="success" expand="lg">
         <Container>
           <LinkContainer to='/'>
             <Navbar.Brand>
-              <Image style={{width:'60px', height:'60px'}} src='images/farmbestlogo.png' alt='FarmBests'/>
+              <Image 
+                style={{width:'60px', height:'60px'}} 
+                src='images/farmbestlogo.png' 
+                alt='FarmBests'/>
             </Navbar.Brand>
           </LinkContainer>
-
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className='mx-auto'>
-                <LinkContainer to='/'>
-                  <Nav.Link>Home</Nav.Link>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className='mx-auto'>
+              <LinkContainer to='/'>
+                <Nav.Link>Home</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to= '/about'>
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+              <NavDropdown title="Crop investment" id="basic-nav-dropdown">
+                <LinkContainer to='/maize'>
+                  <NavDropdown.Item >Maize</NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to= '/about'>
-                  <Nav.Link>About</Nav.Link>
+                <LinkContainer to='/cassava'>
+                   <NavDropdown.Item >Cassava</NavDropdown.Item>
                 </LinkContainer>
-                <NavDropdown title="Crop investment" id="basic-nav-dropdown">
-                  <LinkContainer to='/maize'>
-                    <NavDropdown.Item >Maize</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to='/cassava'>
-                    <NavDropdown.Item >Cassava</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to='/potatoe'>
-                    <NavDropdown.Item >Potatoe</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to='/soya'>
-                    <NavDropdown.Item >Soya</NavDropdown.Item>
-                  </LinkContainer>
-                  <LinkContainer to='/combination'>
-                    <NavDropdown.Item >ALL farms</NavDropdown.Item>
-                  </LinkContainer>
-                </NavDropdown>
+                <LinkContainer to='/potatoe'>
+                  <NavDropdown.Item >Potatoe</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/soya'>
+                  <NavDropdown.Item >Soya</NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to='/investments'>
+                  <NavDropdown.Item >ALL farms</NavDropdown.Item>
+                </LinkContainer>
+              </NavDropdown>
                 <NavDropdown title="Collaboration" id="basic-nav-dropdown">
-                <LinkContainer to='/farmer'>
+                  <LinkContainer to='/farmer'>
                     <NavDropdown.Item >Farmer</NavDropdown.Item>
                   </LinkContainer>
                   <LinkContainer to='/investor'>
@@ -63,20 +65,33 @@ const Header = () => {
                 </LinkContainer>
                 {user? (
                   <NavDropdown title={user.username} id='username'>
-                  <LinkContainer to='/profile'>
-                    <NavDropdown.Item>profile</NavDropdown.Item>
-                  </LinkContainer>
-
-                  <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                    <LinkContainer to='/profile'>
+                      <NavDropdown.Item>profile</NavDropdown.Item>
+                    </LinkContainer>
+                    <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                   </NavDropdown>
                 ):(
                 <LinkContainer to='/login'>
-                <Nav.Link>Login</Nav.Link>
-              </LinkContainer>)}
-              </Nav>
-            </Navbar.Collapse>
-            </Container>
-        </Navbar>     
+                  <Nav.Link>Login</Nav.Link>
+               </LinkContainer>)}
+
+               {user && user.role && (
+              <NavDropdown title='Admin' id='Adminmenu'>
+              <LinkContainer to='/admin/userList'>
+                <NavDropdown.Item>Users</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/admin/investmentList'>
+                <NavDropdown.Item>Investment</NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/admin/orderList'>
+                <NavDropdown.Item>Orders</NavDropdown.Item>
+              </LinkContainer>
+            </NavDropdown>
+              )}
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>     
     </header>
   )
 }

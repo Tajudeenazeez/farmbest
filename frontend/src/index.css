@@ -42,6 +42,15 @@ h1, h3{
   text-decoration: none;
   color: #000;
 }
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 .maincarousel p{
   font: 300 34px/29px arial sans-serif;
 }

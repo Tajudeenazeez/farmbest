@@ -41,7 +41,7 @@ export const orderDetailedAction = (id) => async(dispatch, getState)=> {
   try {
     dispatch({type:ORDER_DETAILED_REQUEST})
     const {userLogin :{user}}
-  const config = {
+    const config = {
     header:{
       'Content-Type' : 'application/json',
       Authorization: `Bearer ${user.token}`

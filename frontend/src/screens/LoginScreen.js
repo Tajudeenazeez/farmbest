@@ -20,7 +20,6 @@ const LoginScreen = ({location, history}) => {
   useEffect(() => {
     if(user)
      history.push(redirect)
-    
   }, [history, user, redirect])
 
   const submitHandler = (e) => {
@@ -57,20 +56,20 @@ const LoginScreen = ({location, history}) => {
           onChange = {(e) => setPassword(e.target.value)}
           required/>
         </Form.Group>
-         <Row>
-         <Col >
-        <Button type='submit' className='my-3' variant='success'>
-          login
-        </Button>
-        </Col>
-         </Row>
-         <Row>
+        <Row>
          <Col>
-            <p>Dont have an account yet?{' '}
-              <Link className ='sign-text' to={redirect ? `/register?redirect=${redirect}` : '/register'}>Sign up</Link></p>
-            <p>Forgot your password?<Link className ='sign-text' to={redirect ? '/reset' : '/reset'}>Click here</Link></p>
-          </Col>
-         </Row>
+          <Button type='submit' className='my-3' variant='success'>
+           login
+          </Button>
+         </Col>
+        </Row>
+        <Row>
+         <Col>
+          <p>Dont have an account yet?{' '}
+            <Link className ='sign-text' to={redirect ? `/register?redirect=${redirect}` : '/register'}>Sign up</Link></p>
+          <p>Forgot your password?<Link className ='sign-text' to={redirect ? '/reset' : '/reset'}>Click here</Link></p>
+         </Col>
+        </Row>
       </Form>
     </FormContainer>
   )

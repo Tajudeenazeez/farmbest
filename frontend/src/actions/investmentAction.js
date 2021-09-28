@@ -10,12 +10,10 @@ import {
 
 export const investmentListAction = () => async(dispatch) => {
 const baseURL ='https://farmbest-backend.herokuapp.com'
- 
   try {
     dispatch({type:INVESTMENT_LIST_REQUEST})
-    const {data} = await axios.get(
-      `${baseURL}/investments`
-    )
+    const {data} = await axios
+      .get(`${baseURL}/investments`)
     dispatch({type:INVESTMENT_LIST_SUCCESS, payload: data.investments})
   } catch (error) {
     dispatch({
@@ -26,14 +24,12 @@ const baseURL ='https://farmbest-backend.herokuapp.com'
 }
 
 //INVESTMENT DETAILED
-export const investmentDetailedAction = (id) => async(dispatch) => {
+export const investmentDetailAction = (id) => async(dispatch) => {
   const baseURL ='https://farmbest-backend.herokuapp.com'
   try {
     dispatch({type:INVESTMENT_DETAILED_REQUEST})
-    
-    const {data} = await axios.get(
-      `${baseURL}/investments/${id}`
-    )
+    const {data} = await axios
+      .get(`${baseURL}/investments/${id}`)
     dispatch({
       type:INVESTMENT_DETAILED_SUCCESS, 
       payload: data

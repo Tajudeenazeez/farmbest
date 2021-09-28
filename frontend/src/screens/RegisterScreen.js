@@ -23,7 +23,6 @@ const RegisterScreen = ({location, history}) => {
   useEffect(() => {
     if(user)
     history.push(redirect)
-    
   }, [history, redirect, user])
 
   const submitHandler = (e) => {
@@ -42,14 +41,14 @@ const RegisterScreen = ({location, history}) => {
       {error && <Message variant='danger'>{error}</Message>}
       {loading && <Loader/>}
       <Form onSubmit ={submitHandler}>
-      <Form.Group controlId='name'>
-          <Form.Label>Name</Form.Label>
-          <Form.Control 
-          type='name' 
-          placeholder='Enter your name'
-          value= {username}
-          onChange={(e)=>setUserName(e.target.value)} 
-          required/>
+        <Form.Group controlId='name'>
+            <Form.Label>Name</Form.Label>
+            <Form.Control 
+            type='name' 
+            placeholder='Enter your name'
+            value= {username}
+            onChange={(e)=>setUserName(e.target.value)} 
+            required/>
         </Form.Group>
         <Form.Group controlId='email'>
           <Form.Label>

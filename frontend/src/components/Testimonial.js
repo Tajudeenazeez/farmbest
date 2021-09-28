@@ -13,8 +13,7 @@ const Testimonial = () => {
     showStatus={false}
     autoPlay={true}
     interval={6100}
-    >
-      
+    >  
       <div>
         <Image src='images/maize1.jpg'/>
         <div className='myCarousel'>

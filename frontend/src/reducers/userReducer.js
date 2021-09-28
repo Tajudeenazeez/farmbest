@@ -51,11 +51,11 @@ export const userUpdateReducer = (state = {}, action) => {
     case USER_UPDATE_REQUEST:
       return {loading:true };
     case USER_UPDATE_SUCCESS:
-        return { loading:false, success:true, user:action.payload};
+      return { loading:false, success:true, user:action.payload};
     case USER_UPDATE_FAIL:
-        return {loading:false, error:action.payload};
-        case USER_UPDATE_RESET:
-          return { user:{} };
+      return {loading:false, error:action.payload};
+    case USER_UPDATE_RESET:
+      return { user:{} };
     default:
       return state;
 }
@@ -67,11 +67,11 @@ export const getUserDetailReducer = (state = {user:{}}, action) => {
     case USER_DETAILS_REQUEST:
       return {...state, loading:true };
     case USER_DETAILS_SUCCESS:
-        return { loading:false, user:action.payload};
+      return { loading:false, user:action.payload};
     case USER_DETAILS_FAIL:
-        return {loading:false, error:action.payload};
-        case USER_DETAILS_RESET:
-          return { user:{} };
+      return {loading:false, error:action.payload};
+    case USER_DETAILS_RESET:
+      return { user:{} };
     default:
       return state;
 }

@@ -19,6 +19,7 @@ import AdminScreen from "./screens/AdminScreen";
 import Topper from "./components/Topper";
 import FaqScreen from "./screens/FaqScreen";
 import CombinationScreen from "./screens/CombinationScreen"
+import investmentDetailScreen from "./screens/investmentDetailScreen"
 
 function App() {
   return (
@@ -41,8 +42,8 @@ function App() {
           <Route path='/profile' component={ProfileScreen} />
           <Route path='/admin' component={AdminScreen}/>
           <Route path='/faq' component={FaqScreen}/>
-          <Route path='/combination' component={CombinationScreen}/>
-         
+          <Route path='/investments' component={CombinationScreen}/>
+          <Route path='/investmentDetail' component={investmentDetailScreen}/>
       </main>
           <Footer/>
     </Router>

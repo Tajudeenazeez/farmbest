@@ -12,7 +12,8 @@ import {
   USER_UPDATE_SUCCESS,
   USER_UPDATE_FAIL,
   USER_DETAILS_SUCCESS,
-  USER_DETAILS_FAIL
+  USER_DETAILS_FAIL,
+  USER_DETAILS_RESET
 } from "../constants/userContant";
 const baseURL ='https://farmbest-backend.herokuapp.com'
 
@@ -30,13 +31,10 @@ export const login = (email, password ) => async(dispatch) => {
       {email, password},
       config
     )
-    dispatch(
-      {
+    dispatch({
       type: USER_LOGIN_SUCCESS,
       payload: data.user
-    }
-    )
-    
+    })
     localStorage.setItem('user', JSON.stringify(data.user))
   } catch (error) {
     dispatch({
@@ -49,9 +47,9 @@ export const login = (email, password ) => async(dispatch) => {
 export const logout = () => (dispatch) => {
   localStorage.removeItem('user')
   dispatch({ type: USER_LOGOUT})
+  dispatch({ type: USER_DETAILS_RESET})
   window.location.href = '/';
   
-  //dispatch({ type: USER_DETAILS_RESET})
 }
 
 //USER REGISTRATION
@@ -68,13 +66,10 @@ export const register = (username, email, password ) => async(dispatch) =>{
       {username,email, password},
       config
     )
-    
     dispatch({
       type: USER_REGISTER_SUCCESS,
       payload: data.user
-
     })
-
     localStorage.setItem('user', JSON.stringify(data.user))
   } catch (error) {
     dispatch({
